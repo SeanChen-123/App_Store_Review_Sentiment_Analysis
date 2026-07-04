@@ -42,14 +42,3 @@ Unlike the one-to-many relationships between the App and Country tables and Raw_
 The schema satisfies the principles of Third Normal Form (3NF) by ensuring that each table represents a single entity, every non-key attribute depends only on the primary key, and transitive dependencies are removed. 
 
 
-## Key Design
-
-...
-
-## Relationship Design
-
-...
-
-## Normalization
-
-...
