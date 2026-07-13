@@ -24,7 +24,12 @@ The following documents are included in the `docs` folder:
 - Repeated Ingestion run Test.pdf
 - App_Store_Data_Ingestion.ipynb
   
-
+The code script regarding the loading is in the 'App_Store_Data_Ingestion.ipynb', right after the line: 'part for Data Schema Design and Data Ingestion'
+Some previously defined fields get changed: 1. date->review_date, in the table raw_reviews(only change name)
+                                            2. language->review_language, in the table raw_reviews(only change name)
+                                            3. The empty_after_cleaning field is dropped, in the table raw_reviews
+                                            4. record_remove_reason field now includes 4 categories of values:'"Missing Review Content", 
+                                            'Duplicated_Records',' Non-English Review Content', "Empty Content After Cleaning"
 ## Current Status
 
 The ingestion pipeline has been successfully implemented and tested for the same RSS database scenario(Skipped the duplicates, while repeatedly loading the same data).
