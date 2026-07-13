@@ -1,11 +1,33 @@
-# Database Schema Design
+# Ingestion Pipeline Testing
 
-This repository contains the database design deliverables for our App Store Review Sentiment Analysis project.
+This branch contains the implementation and testing of the ETL ingestion pipeline for the App Store Review Sentiment Analysis project.
 
-## Contents
+## Scope
 
-- **ERD.pdf** – Entity Relationship Diagram of the proposed database schema.
-- **ER_Diagram_Rationale.pdf** – Design rationale explaining the entities, relationships, keys, and normalization decisions.
-- **Database_Design.md** – GitHub version of the database design documentation.
+The work in this branch focuses on:
 
-The database is designed to support the collection, preprocessing, storage, and future sentiment analysis of App Store reviews while preserving data traceability throughout the ETL process.
+- Creating the MySQL database schema
+- Building the four database tables
+  - App
+  - Country
+  - Raw_Reviews
+  - Cleaned_Reviews
+- Importing cleaned datasets into MySQL
+- Testing repeated ingestion using the same RSS database
+- Testing ingestion using the new RSS database
+- Documenting issues identified during repeated ingestion testing
+
+## Documentation
+
+The following documents are included in the `docs` folder:
+
+- Repeated Ingestion run Test.pdf
+- App_Store_Data_Ingestion.ipynb
+  
+
+## Current Status
+
+The ingestion pipeline has been successfully implemented and tested for the same RSS database scenario(Skipped the duplicates, while repeatedly loading the same data).
+
+For testing on the new RSS dataset, a design issue was identified, and this issue has been documented in 'Repeated Ingestion run Test.pdf'.
+
